@@ -43,11 +43,14 @@ input:not([type="radio"]):not([type="checkbox"]) {
 html {
   font-family: 'Oswald', sans-serif;
     background: lightgray;
-    height: 5000px;
 }
 
 h1{
   font-size: 40px;
+}
+
+h2{
+  font-size: 25px;
 }
 
 li{
@@ -58,7 +61,20 @@ li{
   font-size: 20px;
   color: white;
 }
-
+input{
+  background: transparent;
+  height: 35px;
+  font-size: 15px;
+}
+textarea{
+  background: transparent;
+  height: 350px;
+  font-size: 15px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
 .header {
     position: fixed;
     top: 0;
@@ -83,7 +99,6 @@ li{
 
 .background{
   position: relative;
-  opacity: 0.8;
   text-align: center;
   width: 100%;
   height:100vh;
@@ -96,7 +111,6 @@ li{
 }
 .background1{
   position: relative;
-  opacity: 0.8;
   text-align: center;
   width: 100%;
   height:100vh;
@@ -109,7 +123,6 @@ li{
 }
 .background2{
   position: relative;
-  opacity: 0.8;
   text-align: center;
   width: 100%;
   height:100vh;
@@ -124,8 +137,9 @@ li{
   width: 100%;
   display: inline-block;
   position: absolute;
-  top: 40%;
-  left:0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .contenedor2{
   width: 100%;
@@ -134,31 +148,54 @@ li{
   top: 40%;
   left:0;
 }
+.blur {
+  background-image: url('../assets/fondo.jpg');
+  background-attachment: fixed;
+  background-position: unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(26px);
+  position: absolute;
+  height: 300px;
+  border-radius: 100px;
+  width: 45vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+  
+
 .titulo{
   padding:50px;
   width: fit-content;
   margin:0 auto;
-  color: black;
-  background-color: white; 
-  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-family: 'Oswald', sans-serif;
   position: relative;
-  text-shadow: 2px 2px 8px #A51616;
+  text-shadow: 2px 2px 8px black;
   top: 50%;
   font-weight: 900;
-  font-size: 480%;
+  font-size: 8vw;
 }
 .titulo2,
 .titulo3{
   padding:20px;
   width: fit-content;
+  text-shadow: 2px 9px 20px black;
   margin:0 auto;
   color: white;
   position: relative;
   top: 50%;
   font-weight: 900;
-  font-size: 120px;
+  font-size: 8vw;
 }
 .aboutus{
+  height: 750px; 
+  margin-top: 50px; 
+  width: 100%;
+}
+.contacto{
   height: 750px; 
   margin-top: 50px; 
   width: 100%;
@@ -173,5 +210,159 @@ li{
   margin: 0 auto; 
   margin-top:120px;
   margin-bottom: 140px;
-  border-radius: 20px;
+}
+.boton{
+    cursor: pointer;
+    height: 30px;
+    padding: 5px 0;
+    width: 100.5%;
+    text-align: center;
+    border-style: solid;
+    border-color: #9F9F9F;
+    border-width: 1px;
+    display: inline-block;
+    margin-top: 10px;
+    background:transparent ;
+    font-size: 21px;
+} 
+.footer{
+  width: 100%;
+  height: 65px;
+  background: black;
+  text-align: center;
+ }
+ .textmap{
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 20px;
+ }
+ .containerfooter{
+  display: initial;
+  width: 100%;
+  vertical-align: middle;
+ }
+ .containertextfooter{
+  display: inline-block;
+  text-align: center;
+  width: 85%;
+ }
+ .textfooter{
+  color: lightgray;
+ }
+ .containertextmaps{
+  width: 100%;
+  margin: 30px 0;
+  text-align: center; 
+ }
+ .containerdescription{
+  margin: 0 auto;
+  width:40%;
+  word-break: break-all;
+ }
+ .containerinputs{
+  margin: 0 auto;
+  width:50%;
+ }
+ input{
+  width: 100%;
+ }
+ @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?yio99e');
+  src:  url('fonts/icomoon.eot?yio99e#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yio99e') format('truetype'),
+    url('fonts/icomoon.woff?yio99e') format('woff'),
+    url('fonts/icomoon.svg?yio99e#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up2:before {
+  content: "\ea3a";
+  cursor: pointer;
+  color: white;
+}
+.icon-facebook2:before {
+  content: "\ea91";
+  cursor: pointer;
+  color: white;
+  font-size: 2vw;
+  padding-right:10px;
+}
+.icon-instagram:before {
+  content: "\ea92";
+  cursor: pointer;
+  color: white;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+  li{
+    font-size: 15px;
+  }
+  input{
+    width: 93.5%;
+  }
+  .icon-arrow-up2:before {
+    font-size: 15px;
+  }
+  .icon-facebook2:before {
+    padding-right:5px;
+    font-size: 15px;
+  }
+  .icon-instagram:before {
+    font-size: 15px;
+  }
+  .textfooter{
+    font-size: 8px;
+  }
+  .containertextfooter{
+    width: 80%;
+  }
+  .map{
+    display: none;
+  }
+  .textmaps{
+    text-decoration: underline;
+    color: blue;
+    display: block;
+  }
+  .blur{
+    display: none;
+  }
+  .footer{
+    height: 50px;
+  }
+  .background,.background1,.background2{
+    background-attachment: unset;
+  }
+  .containerdescription{
+    width: 60%;
+  }
+  .boton{
+    font-size: 15px;
+    width: 103%;
+  }
+  .aboutus{
+    height: 400px;
+  }
+  .contacto{
+    height: fit-content;
+    margin-bottom: 30px; 
+  }
 }
