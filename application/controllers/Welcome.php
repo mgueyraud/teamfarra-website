@@ -2,7 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-
+	function __construct(){
+		parent::__construct();
+		$this->load->library('email');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -21,5 +24,17 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('index');
+	}
+	public function sendEmail(){
+		$nombre = $this->input->post('name');
+		$email = $this->input->post('email');
+		$message = $this->input->post('message');
+		$this->email->from($email, $nombre);
+		$this->email->to('mgueyraud.junior@gmail.com');
+
+		$this->email->subject('Team farra(Pagina web)');
+		$this->email->message($message);
+
+		$this->email->send();
 	}
 }
