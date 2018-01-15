@@ -101,12 +101,11 @@
     <div class="containerfooter">
        <div class="container-arrow-up">
         <div class="icon-arrow-up2"></div>
-        <div class="espacio"></div>
     </div>
     <div class="containertextfooter">
         <p class="textfooter">© 2018. Created and designed by Mario Gueyraud</p>
     </div>
-    <div style="display: inline-block; text-align: right;">
+    <div style="display: inline-block; float: right;margin-top: 20px;margin-right:20px; ">
         <div style="display: -webkit-inline-box;">
             <div class="icon-facebook2" ></div>
             <div class="icon-instagram" ></div>
