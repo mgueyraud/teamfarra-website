@@ -82,8 +82,27 @@ a{
   text-decoration: none;
   color: white;
 }
+.cool-link {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFF;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
 .auspiciantes{
-  width: 280px;
+  width: 240px;
   height: 280px;
   border-radius: 48px;
   margin:30px 10px; 
@@ -93,7 +112,7 @@ a{
   width:1px;
   height:670px;
 }
-.header {
+.header{
     position: fixed;
     top: 0;
     left: 0;
@@ -107,14 +126,33 @@ a{
     text-align: center;
     line-height: 40px;
 }
-
-.header.active {
+.header1{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    background-color:transparent;  
+    height: 45px;
+    text-align: center;
+    line-height: 40px;
+}
+.header.active{
     background: black;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
-
+.header1.active{
+    background: black;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
 .background{
   position: relative;
   text-align: center;
@@ -249,11 +287,11 @@ a{
   font-size: 21px;
 } 
 .container-arrow-up{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left:20px;
+  margin-right: 33px;
   display: -webkit-inline-box; 
   text-align: left;
-  font-size: 2vw;
   padding: 0;
   float: left;
 }
@@ -294,6 +332,12 @@ a{
  .containerinputs{
   margin: 0 auto;
   width:50%;
+ }
+ .containersocial{
+  display: inline-block; 
+  float: right;
+  margin-top: 20px;
+  margin-right:20px;
  }
  @font-face {
   font-family: 'icomoon';
@@ -347,6 +391,12 @@ a{
   }
   textarea{
     border-radius: 0px;
+  }
+  .header1{
+    display: block;
+  }
+  .header{
+    display: none;
   }
   .icon-facebook2:before {
     padding-right:5px;
@@ -407,8 +457,11 @@ a{
     display: inline-block;
   }
   .vertical-bar {
-    width:300px;
+    margin: 0 auto;
+    border-top: 1px solid #6E6E6E;
+    width:85%;
     height:1px;
+    margin-top: 40px;
   }
   .container-auspiciantes{
     margin: 0 auto;
@@ -421,5 +474,14 @@ a{
   .auspiciantes{
     width: 45vw;
     height: 30vh;
+  }
+  .containersocial{
+    margin-top: 15px;
+    margin-right:15px;
+  }
+}
+@media screen and (max-width: 337px) {
+  li{
+    font-size: 10px;
   }
 }

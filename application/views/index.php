@@ -8,13 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-
-	 <div class='header'>
+    <div class='header1'>
       <ul id='encabezado' style="height: 100%;">
         <li id="inicio">Inicio</li>
-        <li><a href="#nextparty">Siguiente farra</a></li>
-        <li><a href="#aboutus">Sobre nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li ><a href="#nextparty">Siguiente farra</a></li>
+        <li ><a href="#aboutus">Sobre nosotros</a></li>
+        <li ><a href="#contacto">Contacto</a></li>
+    </div>
+	 <div class='header'>
+      <ul id='encabezado' style="height: 100%;">
+        <li class="cool-link" id="inicio">Inicio</li>
+        <li class="cool-link"><a href="#nextparty">Siguiente farra</a></li>
+        <li class="cool-link"><a href="#aboutus">Sobre nosotros</a></li>
+        <li class="cool-link"><a href="#contacto">Contacto</a></li>
     </div>
 </div>
 </body>
@@ -69,7 +75,7 @@
     </div>
 </div>
 <div id="contacto" class="contacto">
-    <div class="container-contacto" style="width: 50%">
+    <div class="container-contacto" style="width:49.92%">
         <div style="width: 100%; text-align: center;">
             <h1>Contacto</h1>
         </div>
@@ -89,7 +95,7 @@
         </div>
     </div>
     <div class="vertical-bar"></div>
-    <div class="container-auspiciantes" style="width: 50%;">
+    <div class="container-auspiciantes" style="width: 49.92%;">
         <div style="width: 100%; text-align: center;">
             <h1>Auspician</h1>
             <img class="auspiciantes" src="/assets/apleno-logo.jpg">
@@ -105,7 +111,7 @@
     <div class="containertextfooter">
         <p class="textfooter">© 2018. Created and designed by Mario Gueyraud</p>
     </div>
-    <div style="display: inline-block; float: right;margin-top: 20px;margin-right:20px; ">
+    <div class="containersocial">
         <div style="display: -webkit-inline-box;">
             <div class="icon-facebook2" ></div>
             <div class="icon-instagram" ></div>
@@ -150,8 +156,10 @@
             $(window).on("scroll", function() {
                 if($(window).scrollTop() > 50) {
                     $(".header").addClass("active");
+                    $(".header1").addClass("active");
                 } else {
                     $(".header").removeClass("active");
+                    $(".header1").removeClass("active");
                 }
             });
             $('.boton').on('click',function(){
