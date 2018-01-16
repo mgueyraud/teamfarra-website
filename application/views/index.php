@@ -5,6 +5,7 @@
 	<link href="css/inicio.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link style="border-radius: 50%;" rel="icon" type="image/png" href="assets/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
