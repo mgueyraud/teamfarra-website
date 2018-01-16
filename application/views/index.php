@@ -10,7 +10,7 @@
 <body>
     <div class='header1'>
       <ul id='encabezado' style="height: 100%;">
-        <li id="inicio">Inicio</li>
+        <li id="inicio1">Inicio</li>
         <li ><a href="#nextparty">Siguiente farra</a></li>
         <li ><a href="#aboutus">Sobre nosotros</a></li>
         <li ><a href="#contacto">Contacto</a></li>
@@ -151,6 +151,9 @@
                 body.stop().animate({scrollTop:0}, 1500, 'swing', function(){});
             });
             $('#inicio').on('click',function(){
+                body.stop().animate({scrollTop:0}, 1500, 'swing', function(){});
+            });
+            $('#inicio1').on('click',function(){
                 body.stop().animate({scrollTop:0}, 1500, 'swing', function(){});
             });
             $(window).on("scroll", function() {
